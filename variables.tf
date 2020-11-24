@@ -53,4 +53,4 @@ variable "escalation_delay" {
   default = 15
 }
 
-variable "var.escalation_policy_target_id" {}
+variable "escalation_policy_target_id" {}
