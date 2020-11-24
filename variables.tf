@@ -1,6 +1,5 @@
 variable "pagerduty_token" {
-  //default = "YOUR_API_KEY_HERE"
-  default = "uFfmL3pNciYXCkpYY3zy"
+  default = "YOUR_API_KEY_HERE"
 }
 
 variable "enabled" {
@@ -9,8 +8,12 @@ variable "enabled" {
   description = "Gives ability to enable or disable a module"
 }
 
-variable "name" {
+variable "schedule_name" {
   description = "Name of schedule. Make it meaningful"
+}
+
+variable "schedule_layer_name" {
+  description = "The name of the schedule layer (e.g. Night Shift)"
 }
 
 variable "time_zone" {
@@ -33,3 +36,21 @@ variable "users" {
   type = list
 }
 
+variable "escalation_policy_name" {
+  description = "Name of escalation policy. Make it meaningful"
+}
+
+variable "escalation_policy_type" {
+  description = "Can be user, schedule, user_reference or schedule_reference"
+  default     = "schedule"
+}
+
+variable "num_loops" {
+  default = 2
+}
+
+variable "escalation_delay" {
+  default = 15
+}
+
+variable "var.escalation_policy_target_id" {}
