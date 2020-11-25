@@ -1,6 +1,4 @@
-variable "pagerduty_token" {
-  default = "YOUR_API_KEY_HERE"
-}
+variable "pagerduty_token" {}
 
 variable "enabled" {
   type        = bool
@@ -32,7 +30,7 @@ variable "rotation_length" {
   default = 604800
 }
 
-variable "users" {
+variable "layer_users" {
   type = list
 }
 

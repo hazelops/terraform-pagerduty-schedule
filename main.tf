@@ -8,7 +8,7 @@ resource "pagerduty_schedule" "pd_schedule" {
     start                        = var.oncall_start
     rotation_virtual_start       = var.rotation_virtual_start
     rotation_turn_length_seconds = var.rotation_length
-    users                        = [var.users]
+    users                        = var.layer_users
   }
 }
 
