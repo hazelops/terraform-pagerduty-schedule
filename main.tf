@@ -1,4 +1,4 @@
-resource "pagerduty_schedule" "pd_schedule" {
+resource "pagerduty_schedule" "this" {
   count     = var.enabled ? 1 : 0
   name      = var.schedule_name
   time_zone = var.time_zone
@@ -7,15 +7,15 @@ resource "pagerduty_schedule" "pd_schedule" {
     name                         = var.schedule_layer_name
     start                        = var.oncall_start
     rotation_virtual_start       = var.rotation_virtual_start
-    rotation_turn_length_seconds = var.rotation_length
+    rotation_turn_length_seconds = var.rotation_length_in_seconds
     users                        = var.layer_users
   }
 }
 
-resource "pagerduty_escalation_policy" "pd_escalation_policy" {
+resource "pagerduty_escalation_policy" "this" {
   count     = var.enabled ? 1 : 0
   name      = var.escalation_policy_name
-  num_loops = var.num_loops
+  num_loops = var.repeat_loops
 
   rule {
     escalation_delay_in_minutes = var.escalation_delay
