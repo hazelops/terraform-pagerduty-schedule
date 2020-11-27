@@ -6,11 +6,11 @@ variable "enabled" {
   description = "Gives ability to enable or disable a module"
 }
 
-variable "schedule_name" {
+variable "name" {
   description = "Name of schedule. Make it meaningful"
 }
 
-variable "schedule_layer_name" {
+variable "layer_name" {
   description = "The name of the schedule layer (e.g. Night Shift)"
 }
 
