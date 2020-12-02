@@ -1,1 +1,1 @@
-# terraform-pagerduty-user
+# terraform-pagerduty-schedule

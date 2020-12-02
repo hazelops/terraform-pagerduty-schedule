@@ -10,12 +10,12 @@ variable "name" {
   description = "Name of schedule. Make it meaningful"
 }
 
-variable "layer_name" {
-  description = "The name of the schedule layer (e.g. Night Shift)"
-}
-
 variable "time_zone" {
   default = "America/Los_Angeles"
+}
+
+variable "layer_name" {
+  description = "The name of the schedule layer (e.g. Night Shift)"
 }
 
 variable "oncall_start" {
@@ -37,23 +37,3 @@ variable "layer_users" {
   description = "The ordered list of users on this layer. The position of the user on the list determines their order in the layer."
   type = list
 }
-
-variable "escalation_policy_name" {
-  description = "Name of escalation policy. Make it meaningful"
-}
-
-variable "escalation_policy_type" {
-  description = "Can be user, schedule, user_reference or schedule_reference"
-  default     = "schedule"
-}
-
-variable "repeat_loops" {
-  description = "The number of times the escalation policy will repeat after reaching the end of its escalation."
-  default = 2
-}
-
-variable "escalation_delay" {
-  default = 15
-}
-
-variable "escalation_policy_target_id" {}
