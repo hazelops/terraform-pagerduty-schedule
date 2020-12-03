@@ -1,3 +1,3 @@
-output "schedule_id" {
+output "id" {
   value = pagerduty_schedule.this[0].id
 }
