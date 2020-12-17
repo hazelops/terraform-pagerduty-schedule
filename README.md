@@ -16,6 +16,9 @@ This module provides settings:
 ### Miminal setup
 
 ```hcl
+provider "pagerduty" {
+  token = "Pagerduty_Token"
+}
 module "pagerduty_schedule" {
   source          = "git@github.com:hazelops/terraform-pagerduty-schedule.git"
   layer_name      = "<Layer_Name>"
@@ -27,6 +30,9 @@ module "pagerduty_schedule" {
 ### Full setup
 
 ```hcl
+provider "pagerduty" {
+  token = "Pagerduty_Token"
+}
 module "pagerduty_schedule" {
   source          = "git@github.com:hazelops/terraform-pagerduty-schedule.git"
   enabled         = enabled
