@@ -1,3 +1,3 @@
 output "id" {
-  value = pagerduty_schedule.this[0].id
+  value = join("", pagerduty_schedule.this[0].id)
 }
